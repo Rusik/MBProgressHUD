@@ -242,6 +242,17 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 #endif
 }
 
+#pragma mark - Properties
+
+- (MBRoundProgressView *)roundProgressView {
+    return [self.indicator isKindOfClass:[MBRoundProgressView class]] ? (MBRoundProgressView *)self.indicator : nil;
+}
+
+- (MBBarProgressView *)barProgressView {
+    return [self.indicator isKindOfClass:[MBBarProgressView class]] ? (MBBarProgressView *)self.indicator : nil;
+}
+
+
 #pragma mark - Show & hide
 
 - (void)show:(BOOL)animated {

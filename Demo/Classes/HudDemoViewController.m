@@ -105,10 +105,13 @@
 	
 	// Set determinate mode
 	HUD.mode = MBProgressHUDModeDeterminate;
-	
+
+	HUD.roundProgressView.progressTintColor = [UIColor redColor];
+	HUD.roundProgressView.backgroundTintColor = [UIColor greenColor];
+
 	HUD.delegate = self;
 	HUD.labelText = @"Loading";
-	
+
 	// myProgressTask uses the HUD instance to update progress
 	[HUD showWhileExecuting:@selector(myProgressTask) onTarget:self withObject:nil animated:YES];
 }
@@ -119,7 +122,10 @@
 	
 	// Set determinate mode
 	HUD.mode = MBProgressHUDModeAnnularDeterminate;
-	
+
+	HUD.roundProgressView.progressTintColor = [UIColor redColor];
+	HUD.roundProgressView.backgroundTintColor = [UIColor greenColor];
+
 	HUD.delegate = self;
 	HUD.labelText = @"Loading";
 	
@@ -134,7 +140,11 @@
 	
 	// Set determinate bar mode
 	HUD.mode = MBProgressHUDModeDeterminateHorizontalBar;
-	
+
+	HUD.barProgressView.lineColor = [UIColor redColor];
+	HUD.barProgressView.progressRemainingColor = [UIColor greenColor];
+	HUD.barProgressView.progressColor = [UIColor purpleColor];
+
 	HUD.delegate = self;
 	
 	// myProgressTask uses the HUD instance to update progress
